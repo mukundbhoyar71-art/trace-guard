@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-main: #0B0D0F;
+    --bg-sidebar: #101214;
+    --bg-card: #151719;
+    --bg-card-secondary: #1B1E22;
+    --border-main: #292D32;
+    --electric-blue: #078BFF;
+    --purple: #8B5CF6;
+    --cyan: #00CFFF;
+    --green: #22C55E;
+    --orange: #F59E0B;
+    --red: #EF4444;
+  }
+  
+  body {
+    background-color: #0B0D0F;
+    color: #FFFFFF;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #101214;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #292D32;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #078BFF;
+}
+
+/* Premium Dark Cybersecurity Cards */
+.cyber-card {
+  background-color: #151719;
+  border: 1px solid #292D32;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cyber-card:hover {
+  border-color: rgba(7, 139, 255, 0.4);
+  box-shadow: 0 8px 30px -4px rgba(0, 0, 0, 0.6), 0 0 15px -3px rgba(7, 139, 255, 0.12);
+}
+
+.cyber-card-secondary {
+  background-color: #1B1E22;
+  border: 1px solid #292D32;
+}
+
+.cyber-glow-blue {
+  box-shadow: 0 0 20px -3px rgba(7, 139, 255, 0.35);
+}
+
+.cyber-grid-pattern {
+  background-size: 24px 24px;
+  background-image: radial-gradient(rgba(41, 45, 50, 0.6) 1px, transparent 1px);
+}

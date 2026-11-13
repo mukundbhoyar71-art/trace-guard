@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 100" fill="none">
+  <defs>
+    <linearGradient id="shieldGradFull" x1="15" y1="10" x2="85" y2="90" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00CFFF" />
+      <stop offset="50%" stop-color="#078BFF" />
+      <stop offset="100%" stop-color="#8B5CF6" />
+    </linearGradient>
+    <linearGradient id="fingerprintGradFull" x1="30" y1="25" x2="70" y2="75" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="50%" stop-color="#00CFFF" />
+      <stop offset="100%" stop-color="#078BFF" />
+    </linearGradient>
+    <filter id="neonGlowFull" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Left Shield Icon (size ~ 80x80 inside 100x100) -->
+  <g transform="translate(4, 5)">
+    <!-- Orbital Scanning Ring -->
+    <circle cx="45" cy="45" r="42" stroke="#078BFF" stroke-opacity="0.25" stroke-width="1" stroke-dasharray="3 3" />
+    <circle cx="45" cy="45" r="42" stroke="#00CFFF" stroke-width="1.8" stroke-dasharray="20 120" stroke-linecap="round" filter="url(#neonGlowFull)" />
+
+    <!-- Corner Brackets -->
+    <path d="M 6 16 L 6 6 L 16 6" stroke="#078BFF" stroke-width="1.6" stroke-linecap="round" />
+    <path d="M 84 16 L 84 6 L 74 6" stroke="#078BFF" stroke-width="1.6" stroke-linecap="round" />
+    <path d="M 6 74 L 6 84 L 16 84" stroke="#078BFF" stroke-width="1.6" stroke-linecap="round" />
+    <path d="M 84 74 L 84 84 L 74 84" stroke="#078BFF" stroke-width="1.6" stroke-linecap="round" />
+
+    <!-- Outer Shield -->
+    <path d="M 45 10 L 73 21 L 73 47 C 73 67 45 80 45 80 C 45 80 17 67 17 47 L 17 21 Z" 
+          fill="#101214" 
+          stroke="url(#shieldGradFull)" 
+          stroke-width="2" 
+          stroke-linejoin="round" />
+
+    <!-- Inner Shield Trim -->
+    <path d="M 45 16 L 67 25 L 67 46 C 67 62 45 73 45 73 C 45 73 23 62 23 46 L 23 25 Z" 
+          fill="#151719" 
+          stroke="#292D32" 
+          stroke-width="1" />
+
+    <!-- Digital Fingerprint -->
+    <g stroke="url(#fingerprintGradFull)" stroke-width="1.5" stroke-linecap="round" fill="none">
+      <path d="M 45 33 C 43 33 41 35 41 38 C 41 43 44 47 45 51 C 45.5 53 45 56 43 59" />
+      <path d="M 38 40 C 38 34 41 30 45 30 C 49 30 51 33 51 37 C 51 42 49 46 49 51 C 49 54 50 57 51 60" />
+      <path d="M 34 46 C 34 38 39 27 45 27 C 51 27 55 32 55 38 C 55 44 52 50 53 55 C 53.5 58 55 60 56 62" />
+      <path d="M 31 53 C 31 42 36 24 45 24 C 54 24 59 30 59 38 C 59 46 56 53 57 59" />
+      <circle cx="45" cy="38" r="1.2" fill="#00CFFF" stroke="none" />
+    </g>
+
+    <!-- Scan Line -->
+    <line x1="24" y1="44" x2="66" y2="44" stroke="#00CFFF" stroke-width="0.8" stroke-dasharray="3 1.5" />
+    <circle cx="45" cy="44" r="2" fill="#FFFFFF" filter="url(#neonGlowFull)" />
+  </g>
+
+  <!-- Typography Right Side -->
+  <g transform="translate(112, 54)">
+    <!-- Wordmark -->
+    <text font-family="'Inter', 'Space Grotesk', system-ui, sans-serif" font-weight="900" font-size="34" letter-spacing="2.5">
+      <tspan fill="#FFFFFF" x="0" y="0">TRACE</tspan>
+      <tspan fill="#078BFF" dx="8">GUARD</tspan>
+    </text>
+
+    <!-- Tagline -->
+    <text x="2" y="24" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="9.5" font-weight="600" fill="#9CA3AF" letter-spacing="3.2">
+      YOUR DIGITAL LIFE. YOUR CONTROL.
+    </text>
+
+    <!-- Subtle accent line -->
+    <line x1="2" y1="31" x2="280" y2="31" stroke="#292D32" stroke-width="1" />
+    <line x1="2" y1="31" x2="70" y2="31" stroke="#078BFF" stroke-width="1.5" />
+  </g>
+</svg>
+
